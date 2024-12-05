@@ -1,0 +1,38 @@
+ h3-backup-fail
+
+
+{
+  "version": "0",
+  "id": "710b0398-d48e-f3c3-afca-cfeb2fdaa656",
+  "detail-type": "Backup Job State Change",
+  "source": "aws.backup",
+  "account": "1112233445566",
+  "time": "2020-07-29T20:15:26Z",
+  "region": "us-west-2",
+  "resources": [],
+  "detail": {
+    "backupJobId": "34176239-e96d-4e1d-9fad-529dbb3c3556",
+    "backupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:9ab3e749-82c6-4342-9320-5edbf4918b86",
+    "backupVaultName": "9ab3e749-82c6-4342-9320-5edbf4918b86",
+    "bytesTransferred": "0",
+    "creationDate": "2020-07-29T20:13:07.392Z",
+    "iamRoleArn": "arn:aws:iam::1112233445566:role/MockRCBackupTestRole",
+    "resourceArn": "arn:aws:service:us-west-2:1112233445566:resource-type/resource-id",
+    "resourceType": "type",
+    "state": "FAILED",
+    "statusMessage": "\"Backup job failed because backup vault arn:aws:backup:us-west-2:1112233445566:backup-vault:9ab3e749-82c6-4342-9320-5edbf4918b86 does not exist.\"",
+    "startBy": "2020-07-30T04:13:07.392Z",
+    "percentDone": 0, 
+    "retryCount": 3
+  }
+}
+
+
+
+{
+  "source": ["aws.backup"],
+  "detail-type": ["Backup Job State Change"],
+  "detail": {
+    "state": ["FAILED"]
+  }
+}
